@@ -47,4 +47,17 @@ view: products {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
   }
+
+#   for lingering drill tooltip repo
+
+  measure: count1 {
+    type: count
+    drill_fields: [department, count2 ]
+  }
+
+  measure: count2 {
+    type: count
+    drill_fields: [id, retail_price, sku]
+  }
+
 }
